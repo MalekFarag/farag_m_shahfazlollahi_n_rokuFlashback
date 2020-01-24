@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RokuFlashback - Malek, Nick</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Main.JS -->
+    <script src="js/main.js"></script>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/066bb77ccc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- top nav -->
+
+<div id="topNav">
+    <div class="topNavIcon">
+        <!-- dynamic logo depending on what media youre currently using -->
+        <!-- music or movie -->
+        <div v-if='user.isMusic'>
+           <i class="fas fa-music"></i> 
+        </div>
+        <div v-else>
+            <i class="fas fa-play"></i>
+        </div>
+        
+
+    </div>
+
+        <div @click='userMedia()' role="button" :class="{ 'logged-in' :user.isLoggedIn }" >
+            <li v-if='user.isMusic' class="topNavItem">Roku Video</li>
+            <li v-else class="topNavItem">Roku Music</li>
+        </div>
+</div>
+
+<!-- main content -->
+
+<!-- bottom nav -->
+<nav class="mainNav">
+    <ul>
+        <li class='mNavItem'><i class="fas fa-home"></i></li>
+        <li class='mNavItem'><i class="fas fa-search"></i></li>
+        <li class='mNavItem'><i class="fas fa-book"></i></li>
+    </ul>
+</nav>
+
+
+<!-- settings -->
+</body>
+</html>
