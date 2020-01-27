@@ -7,6 +7,32 @@ body{
     width: 100%; 
 }
 
+
+//Temporary styling h1,h2
+h1{
+    font-size: 36px;
+}
+h2{
+    font-size: 24px;
+}
+
+.mainHeader{
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    .topNav{
+        .topNavItem{
+            list-style: none;
+        }
+    }
+    .fas{
+        font-size: 20px;
+    }
+}
+
+
+
 .mainNav{
     position: absolute;
     bottom: 0;
@@ -17,13 +43,34 @@ body{
         list-style: none;
         display: flex;
         justify-content: space-around;
-        padding: 10px;
+        padding: 7px;
         background: rgba($color: #000000, $alpha: .1);
 
         .mNavItem{
-            font-size: 36px;
+            font-size: 26px; 
 
         }
     }
     
+}
+
+.mediaContainer{
+
+    .scrollList{
+        ul{
+            display: flex;
+            overflow: auto;
+            margin-left: 10px;
+            margin-right: 15px;
+            .scrollItem{
+                margin: 10px 5px;
+                padding: 30px;
+
+                font-size: 20px;
+
+                background: rgba($color: #e789ff, $alpha: 1)
+            }
+        }
+        
+    }
 }
