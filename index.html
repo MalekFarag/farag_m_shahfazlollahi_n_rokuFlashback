@@ -7,7 +7,8 @@
     <title>RokuFlashback - Malek, Nick</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Vue JS -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/066bb77ccc.js" crossorigin="anonymous"></script>
 </head>
@@ -19,69 +20,49 @@
         <div class="topNavIcon">
             <!-- dynamic logo depending on what media youre currently using -->
             <!-- music or movie -->
-            <div v-if='user.isMusic'>
+            <!-- <div v-if='user.isMusic'>
             <i class="fas fa-music"></i> 
             </div>
             <div v-else>
                 <i class="fas fa-play"></i>
-            </div>
+            </div> -->
             
 
         </div>
 
-            <div @click='userMedia()' role="button" :class="{ 'logged-in' :user.isLoggedIn }" >
+            <!-- <div @click='userMedia()' role="button" :class="{ 'logged-in' :user.isLoggedIn }" >
                 <li v-if='user.isMusic' class="topNavItem">Roku Video</li>
                 <li v-else class="topNavItem">Roku Music</li>
-            </div>
+            </div> -->
     </div>
 
     <!-- settings -->
-    <div class="settings">
-        <i class="fas fa-cog"></i>
-    </div>
+    <router-link to="/settings" class="settings"><i class="fas fa-cog"></i></router-link>
 
     </header>
 
 
     <!-- main content -->
-    <div class="content">
-        <div v-if='user.isMusic' class="mediaContainer">
-            <h1>Music</h1>
-            <h2>Years</h2>
-            <div class="scrollList">
-                <ul>
-                    <li class="scrollItem" v-for='years in music.years'>{{years}}</li>
-                </ul>
-            </div>
-        </div>
 
-        <div v-else class="mediaContainer">
-            <h1>Film</h1>
-            <h2>Genres</h2>
-            <div class="scrollList">
-                <ul>
-                    <li class="scrollItem" v-for='genres in film.genres'>{{genres}}</li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
+    <router-view></router-view>
 
     <!-- bottom nav -->
-    <nav class="mainNav">
+    <footer>
+        <nav class="mainNav">
         <ul>
-            <li class='mNavItem'><i class="fas fa-home"></i></li>
-            <li class='mNavItem'><i class="fas fa-search"></i></li>
-            <li class='mNavItem'><i class="fas fa-book"></i></li>
+            <router-link to="/" class="mNavItem"><i class="fas fa-home"></i></router-link>
+            <router-link to="/search" class="mNavItem"><i class="fas fa-search"></i></router-link>
+            <router-link to="/library" class="mNavItem"><i class="fas fa-book"></i></router-link>
         </ul>
     </nav>
-
+    </footer>
+    
 </main>
 
 
 
 
 <!-- Main.JS -->
-<script src="js/main.js"></script>
+<script src="js/main.js" type="module"></script>
 </body>
 </html>

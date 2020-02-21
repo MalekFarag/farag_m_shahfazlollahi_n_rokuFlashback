@@ -1,38 +1,26 @@
+ //vue router
+        //importing pages from components
+        import homePage from './components/homePage.js';
+        import searchPage from './components/searchPage.js';
+        import libraryPage from './components/libraryPage.js';
+        import settingsPage from './components/settingsPage.js';
+        import errorPage from './components/errorPage.js';
 
-
-    // creating template for rendering media (music + film)
-    Vue.component('mediaContent',{
-        template: `
-            
-        `
-    })
+    const router = new VueRouter({
+        routes: [
+        { path: '/', name: 'home', component: homePage },
+        { path: '/search', name: 'search', component: searchPage },
+        { path: '/library', name: 'library', component: libraryPage},
+        { path: '/settings', name: 'settings', component: settingsPage},
+        { path: '/*', name: 'error', component: errorPage}
+      ]
+      })
 
     // Vue for app
     var vm = new Vue({
-        el: '#app',
-
-        data:{
-            user:{
-                isMusic: true
-            },
-
-            music:{
-                years: ['50s', '60s', '70s', '80s', '90s'],
-                genres: ['Rock', 'Pop', 'Folk', 'Hip-Hop', 'Metal']
-            },
-
-            film:{
-                years: ['50s', '60s', '70s', '80s', '90s'],
-                genres: ['Drama', 'Reality', 'Horror', 'Mystery', 'Sci-fi']
-            }
-
+        created: function() {
+            console.log('app is up an running');
         },
 
-        methods:{
-            userMedia(){
-                console.log('chaning media.');
-                this.user.isMusic = (this.user.isMusic) ? false : true;
-            }
-        }
-    });
-
+        router
+    }).$mount("#app");
