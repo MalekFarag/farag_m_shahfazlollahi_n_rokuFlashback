@@ -1,33 +1,13 @@
 export default{
     template: `
-    <div class="content">
-       <h1> this is the home page</h1>
+    <div class="container">
+       <h1>Sign In</h1>
+
+       <ul class="signin">
+        <router-link to="/app" class="account">Profile 1</router-link>
+        <router-link to="/app" class="account">Profile 2</router-link>
+        <router-link to="/app" class="account">Profile 3</router-link>
+       </ul>
     </div>
     `
-
-    // data: function(){
-    //     return{
-    //         user:{
-    //         isMusic: ''
-    //     },
-
-    //     // music:{
-    //     //     years: ['50s', '60s', '70s', '80s', '90s'],
-    //     //     genres: ['Rock', 'Pop', 'Folk', 'Hip-Hop', 'Metal']
-    //     // },
-
-    //     // film:{
-    //     //     years: ['50s', '60s', '70s', '80s', '90s'],
-    //     //     genres: ['Drama', 'Reality', 'Horror', 'Mystery', 'Sci-fi']
-    //     // }
-    //     // }
-    // }
-
-    // methods:{
-    //     userMedia(){
-    //         console.log('chaning media.');
-    //         this.user.isMusic = (this.user.isMusic) ? false : true;
-    //     }
-    // }
-// }
-}
+    }
