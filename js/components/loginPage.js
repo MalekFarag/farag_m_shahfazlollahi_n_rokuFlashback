@@ -2,9 +2,7 @@ export default {
     template: `
         <div class="container">
             <div>
-                <h1>Welcome to Flashback!</h1>
-                <p>Before revisiting your favourite movies, tv shows or music from yesteryear, please log in with a valid username and password.</p>
-                <hr>
+                <h1>Welcome to Flashback</h1>
                 <form @submit.prevent="login">
                     <div>
                         <div>
@@ -45,7 +43,7 @@ export default {
                 formData.append("username", this.input.username);
                 formData.append("password", this.input.password);
 
-                let url = "./includes/index.php?username=true&&password=true";
+                let url = "./includes/index.php?user=true";
 
                 fetch(url, {
                     method: "POST",
@@ -53,7 +51,7 @@ export default {
                 })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    console.log(data[0]);
 
                     // tell the app that we have a successful login
                     // and store the user object that we retrieved
