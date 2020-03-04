@@ -28,19 +28,19 @@ ____________________________________________________________________
 
 
 ### Built With
-###### HTML5, WAMP/MAMP, Vue, JSON, SASS, PHP
+##### HTML5, WAMP/MAMP, Vue, JSON, SASS, PHP
 
 ____________________________________________________________________
 
 
 ### Designed with 
-###### Photoshop, Indesign, Invision App
+##### Photoshop, Indesign, Invision App
 
 ____________________________________________________________________
 
 
-### Developer
+#### Developer
 ###### Malek Farag
 
-### Designer
+#### Designer
 ###### Nick Shahfazlollahi
