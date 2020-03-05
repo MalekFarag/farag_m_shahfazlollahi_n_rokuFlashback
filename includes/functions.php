@@ -9,7 +9,7 @@
 
         // echo $username;
 
-        $getUser = 'SELECT * FROM tbl_user WHERE username="' .$username. '"'; //AND "' .$password. '"
+        $getUser = 'SELECT * FROM tbl_user WHERE username = "'.$username.'" AND password = "'.$password.'"';
         $runQuery = $conn->query($getUser);
 
         $result = array();
