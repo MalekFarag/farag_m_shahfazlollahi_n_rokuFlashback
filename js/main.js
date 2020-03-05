@@ -8,12 +8,13 @@
         import errorPage from './components/errorPage.js';
 
     const router = new VueRouter({
-        routes: [
-        { path: '/', component: homePage, name: 'home', redirect: { name: "login" }  }, // redirect to home once logged in
+      routes: [
+        { path: '/', redirect: { name: "login" } }, // redirect to home once logged in
         { path: '/login', name: 'login', component: loginPage },
         { path: '/search', name: 'search', component: searchPage },
         { path: '/library', name: 'library', component: libraryPage},
         { path: '/settings', name: 'settings', component: settingsPage},
+        { path: '/home', name: 'home', component: homePage },
         { path: '/*', name: 'error', component: errorPage}
       ]
       });
