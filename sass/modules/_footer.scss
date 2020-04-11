@@ -1,0 +1,69 @@
+.footNav{
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0px 0px 17px -8px rgba(0,0,0,0.75);
+
+    .mainNav{
+        background-color: rgb(32, 32, 32);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        li{
+            font-size: 26px;
+            padding: 20px;
+            cursor: pointer;
+            a{
+                color: rgb(233, 233, 233);
+            }
+            
+        }
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+    opacity: .7;
+    color: rgb(233, 233, 233);
+
+    .social{
+        display: flex;
+        justify-content: space-evenly;
+        li{
+            margin: 10px;
+            font-size: 16px;
+            color: rgb(233, 233, 233);
+        }
+    }
+    .copy{
+        font-size: 12px;
+        margin: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px){
+
+    .footNav{
+        z-index: 1;
+        width: 55px;
+        height: 100%;
+        align-items: flex-start;
+        bottom: unset;
+        top: 0;
+        left: 0;
+        .mainNav{
+            flex-direction: column;
+            padding-top: 60px;
+        }
+    }
+}

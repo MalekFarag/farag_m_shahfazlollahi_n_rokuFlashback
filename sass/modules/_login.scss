@@ -1,0 +1,65 @@
+.loginPage{
+    padding-top: 250px;
+    width: 100%;
+    h1{
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    form{
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        max-width: 600px;
+        font-family: 'Lato', sans-serif;
+
+        input{
+            border: none;
+            border-bottom: solid 2px #6C3C97;
+            padding: 10px 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        button{
+            background-color: #6C3C97;
+            border: none;
+            color: white;
+            max-width: 150px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.allUsersPage{
+    h1{
+        width: 100%;
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    .userList{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+        .userComponent{
+            margin-bottom: 30px;
+            img{
+                height: 150px;
+                width: 150px;
+                margin-bottom: 6px;
+                border-radius: 100%;
+            }
+            
+            p{
+                width: 150px;
+                text-align: center;
+            }
+        }
+    }
+}

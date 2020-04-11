@@ -1,0 +1,85 @@
+.homePage{
+    h1{
+        font-size: 22px;
+        margin: 10px;
+    }
+    h2{
+                font-size: 18px;
+                margin: 10px;
+            }
+
+    .mediaList{ //scroll
+        display: flex;
+        overflow: auto;
+        margin: 10px;
+
+        
+
+        .mediaItem{
+            display: flex;
+            flex-direction: column;
+            margin-right: 5px;
+            margin-bottom: 8px;
+            width: 125px;
+            img{
+                height: 125px;
+                width: 125px;
+                margin-bottom: 6px;
+            }
+            h4{
+                font-size: 14px;
+                margin: 3px 0;
+            }
+            h6{
+                font-size: 12px;
+                margin: 3px 0;
+            }
+
+        }
+    } 
+
+    .kidsMediaWrap{
+        .mediaList{
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .homePage{
+        h1{
+            font-size: 28px;
+        }
+        h2{
+            font-size: 22px;
+        }
+
+        .mediaList{
+            flex-wrap: wrap;
+
+            .mediaItem{
+                width: 200px;
+                img{
+                    height: 200px;
+                    width: 200px;
+                    margin-bottom: 10px;
+                }
+                h4{
+                    font-size: 18px;
+                    margin: 5px 0;
+                }
+                h6{
+                    font-size: 14px;
+                    margin: 5px 0;
+                }
+            }
+
+            .kidsMediaWrap{
+                .mediaList{
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

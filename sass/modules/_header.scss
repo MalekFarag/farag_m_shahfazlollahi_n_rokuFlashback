@@ -1,0 +1,36 @@
+.mainHeader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 0px 0px 17px -8px rgba(0,0,0,0.75);
+    color: white;
+    z-index: 2;
+
+    img{
+        max-width: 100px;
+        margin-left: 10px;
+        margin-right: 4px;
+    }
+
+    .navList{
+        list-style: none;
+        
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-right: 5px;
+        li{
+            font-size: 22px;
+            margin-left: 10px;
+        }
+    }
+}
