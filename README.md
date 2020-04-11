@@ -19,7 +19,7 @@ ____________________________________________________________________
 
 
 ## How to use
-#### 1: Login in with Username: malek and Password: pass
+#### 1: Login in with `user: malekiscool` `pass: password` or use any other credetials from the database
 #### 2: Scroll through media by choosing genre or decade
 #### 3: Click on a movie/show/music to show details and view content
 #### 4: Enjoy!
@@ -28,7 +28,7 @@ ____________________________________________________________________
 
 
 ### Built With
-##### HTML5, WAMP/MAMP, Vue, JSON, SASS, PHP
+##### HTML5, WAMP/MAMP, Vue, JS, SASS, PHP
 
 ____________________________________________________________________
 
